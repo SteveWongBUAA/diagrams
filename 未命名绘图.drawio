@@ -1,20 +1,20 @@
-<mxfile host="app.diagrams.net" modified="2020-07-09T09:40:59.156Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="z9SYPouNiX68k-L-hGtd" version="13.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-07-09T11:36:34.008Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="0996gMyEjEI81hRC3ctJ" version="13.4.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="2276" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="3nuBFxr9cyL0pnOWT2aG-1" value="快递员(pdd小程序)" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-1" value="pdd小程序" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
           <mxGeometry x="120" y="80" width="100" height="630" as="geometry" />
         </mxCell>
         <mxCell id="3nuBFxr9cyL0pnOWT2aG-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="3nuBFxr9cyL0pnOWT2aG-1" vertex="1">
-          <mxGeometry x="45" y="70" width="10" height="560" as="geometry" />
+          <mxGeometry x="45" y="50" width="10" height="580" as="geometry" />
         </mxCell>
-        <mxCell id="3nuBFxr9cyL0pnOWT2aG-5" value="门禁系统(微信)" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
-          <mxGeometry x="300" y="80" width="100" height="630" as="geometry" />
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-5" value="微信" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="80" width="100" height="630" as="geometry" />
         </mxCell>
         <mxCell id="3nuBFxr9cyL0pnOWT2aG-6" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="3nuBFxr9cyL0pnOWT2aG-5" vertex="1">
-          <mxGeometry x="45" y="70" width="10" height="560" as="geometry" />
+          <mxGeometry x="45" y="50" width="10" height="580" as="geometry" />
         </mxCell>
         <mxCell id="aFgjdF3cAKlBIOMiIda9-23" value="" style="endArrow=classic;html=1;exitX=1.3;exitY=0.557;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.62;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;curved=1;" edge="1" parent="3nuBFxr9cyL0pnOWT2aG-5" source="3nuBFxr9cyL0pnOWT2aG-6" target="3nuBFxr9cyL0pnOWT2aG-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -30,26 +30,50 @@
             <mxPoint x="-18.04" y="13.590000000000003" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-39" value="" style="endArrow=classic;html=1;exitX=1.2;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.1;entryY=0.155;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="3nuBFxr9cyL0pnOWT2aG-5" source="3nuBFxr9cyL0pnOWT2aG-6" target="3nuBFxr9cyL0pnOWT2aG-6">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-39" value="" style="endArrow=classic;html=1;entryX=1.1;entryY=0.155;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="3nuBFxr9cyL0pnOWT2aG-5" target="3nuBFxr9cyL0pnOWT2aG-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="110" y="150" as="sourcePoint" />
+            <mxPoint x="50" y="130" as="sourcePoint" />
             <mxPoint x="160" y="100" as="targetPoint" />
             <Array as="points">
               <mxPoint x="120" y="140" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-40" value="生成授权码" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-39">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-40" value="根据appid取出redirect_url&lt;br&gt;生成授权码code123，redis存key code:${appid}" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-39">
           <mxGeometry x="-0.2863" y="2" relative="1" as="geometry">
+            <mxPoint x="102.2" y="-4.81" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-47" value="验证refresh_token有效" style="endArrow=classic;html=1;exitX=0.9;exitY=0.746;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.2;entryY=0.818;entryDx=0;entryDy=0;entryPerimeter=0;elbow=horizontal;" edge="1" parent="3nuBFxr9cyL0pnOWT2aG-5" source="3nuBFxr9cyL0pnOWT2aG-6" target="3nuBFxr9cyL0pnOWT2aG-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="540" as="sourcePoint" />
+            <mxPoint x="100" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="100" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-50" value="" style="endArrow=classic;html=1;exitX=1.4;exitY=0.06;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.2;entryY=0.093;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="3nuBFxr9cyL0pnOWT2aG-5" source="3nuBFxr9cyL0pnOWT2aG-6" target="3nuBFxr9cyL0pnOWT2aG-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="120" as="sourcePoint" />
+            <mxPoint x="150" y="70" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="120" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-51" value="appid+redirect_url有效（已经在库里了）" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-50">
+          <mxGeometry x="-0.2938" y="1" relative="1" as="geometry">
+            <mxPoint x="77.07" y="2.460000000000001" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-8" value="请求授权码&#xa;wechat.com/auth?type=code&#xa;&amp;appid=pdd&#xa;&amp;redirect_url=pdd.com" style="verticalAlign=bottom;endArrow=block;entryX=-0.4;entryY=0.055;shadow=0;strokeWidth=1;exitX=1.5;exitY=0.177;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="aFgjdF3cAKlBIOMiIda9-2" target="3nuBFxr9cyL0pnOWT2aG-6" edge="1">
+          <mxGeometry x="0.4394" relative="1" as="geometry">
+            <mxPoint x="275" y="160" as="sourcePoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3nuBFxr9cyL0pnOWT2aG-8" value="请求授权码" style="verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;shadow=0;strokeWidth=1;" parent="1" source="3nuBFxr9cyL0pnOWT2aG-2" target="3nuBFxr9cyL0pnOWT2aG-6" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="275" y="160" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="3nuBFxr9cyL0pnOWT2aG-9" value="问下用户愿不愿意授权" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" parent="1" edge="1">
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-9" value="问下用户愿不愿意授权，点同意的按钮是POST wechat.com/auth/ok?appid=pdd.com" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;exitX=-0.4;exitY=0.095;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="3nuBFxr9cyL0pnOWT2aG-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="345" y="187" as="sourcePoint" />
             <mxPoint x="19.5" y="187" as="targetPoint" />
@@ -59,33 +83,33 @@
           <mxGeometry x="-30" y="80" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="aFgjdF3cAKlBIOMiIda9-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="aFgjdF3cAKlBIOMiIda9-1">
-          <mxGeometry x="45" y="70" width="10" height="160" as="geometry" />
+          <mxGeometry x="45" y="50" width="10" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="3nuBFxr9cyL0pnOWT2aG-3" value="访问" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;exitX=0.9;exitY=0.006;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="3nuBFxr9cyL0pnOWT2aG-2" edge="1" source="aFgjdF3cAKlBIOMiIda9-2">
+        <mxCell id="3nuBFxr9cyL0pnOWT2aG-3" value="访问pdd.com" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;exitX=0.9;exitY=0.006;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="3nuBFxr9cyL0pnOWT2aG-2" edge="1" source="aFgjdF3cAKlBIOMiIda9-2">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="105" y="150" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-9" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.513;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-9" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.513;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" target="3nuBFxr9cyL0pnOWT2aG-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="25" y="208.08000000000004" as="sourcePoint" />
             <mxPoint x="349.5" y="208.08000000000004" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-10" value="愿意" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-9">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-10" value="点击愿意: POST wechat.com/auth/ok?appid=pdd.com" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-9">
           <mxGeometry x="0.2265" y="2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-165" y="-6.08" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-11" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.632;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.2;exitY=0.688;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-11" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.632;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0.482;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="343" y="419.9999999999999" as="sourcePoint" />
             <mxPoint x="175" y="419.9999999999999" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-12" value="给你token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-11">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-12" value="给你token&lt;br&gt;POST pdd.com/token?token=t123&amp;amp;refreshToken=rt123&amp;amp;expire=xxx" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-11">
           <mxGeometry x="-0.1786" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-44" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="aFgjdF3cAKlBIOMiIda9-13" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-5" target="3nuBFxr9cyL0pnOWT2aG-5">
@@ -94,15 +118,16 @@
             <mxPoint x="510" y="230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-14" value="生成token，1分钟有效" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-13">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-14" value="生成token=t123，1分钟有效&lt;br&gt;再给一个refreshToken=rt123用来刷新token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-13">
           <mxGeometry x="-0.1366" y="-6" relative="1" as="geometry">
             <mxPoint x="-9.5" y="4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-15" value="请求用户电话号码，带token" style="verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;shadow=0;strokeWidth=1;" edge="1" parent="1">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-15" value="带token请求电话号码&#xa;GET wehat.com/phone header:Authorization: Bearer t123" style="verticalAlign=bottom;endArrow=block;entryX=-0.3;entryY=0.555;shadow=0;strokeWidth=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="3nuBFxr9cyL0pnOWT2aG-6">
+          <mxGeometry x="0.1111" y="-10" relative="1" as="geometry">
             <mxPoint x="170" y="460" as="sourcePoint" />
             <mxPoint x="350" y="460.0000000000001" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="aFgjdF3cAKlBIOMiIda9-25" value="" style="endArrow=classic;html=1;exitX=0.1;exitY=0.62;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-6" target="3nuBFxr9cyL0pnOWT2aG-2">
@@ -128,7 +153,7 @@
             <mxPoint x="359.5" y="218.08000000000004" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-42" value="回到pdd，带上授权码" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-41">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-42" value="回到pdd，带上授权码&lt;br&gt;pdd.com?code=code123" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-41">
           <mxGeometry x="0.2265" y="2" relative="1" as="geometry">
             <mxPoint x="-23.99" as="offset" />
           </mxGeometry>
@@ -139,9 +164,42 @@
             <mxPoint x="310" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-44" value="后端用授权码请求token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-43">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-44" value="后端用授权码请求token&lt;br&gt;wechat.com/auth?type=token&lt;br&gt;&amp;amp;appid=pdd&amp;amp;secretKey=xx&lt;br&gt;&amp;amp;code=code123&lt;br&gt;&amp;amp;redirect_url=&lt;br&gt;pdd.com/token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-43">
           <mxGeometry x="0.2265" y="2" relative="1" as="geometry">
             <mxPoint x="-23.99" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-45" value="" style="endArrow=classic;html=1;exitX=1.2;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.1;entryY=0.743;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-2" target="3nuBFxr9cyL0pnOWT2aG-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="176" y="297.76" as="sourcePoint" />
+            <mxPoint x="585" y="297.76" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-46" value="快到期了，刷新token&lt;br&gt;POST wechat.com/auth?type=refresh_token&lt;br&gt;&amp;amp;appid=pdd&amp;amp;secretKey=xx&lt;br&gt;&amp;amp;refreshToken=rt123" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-45">
+          <mxGeometry x="0.2265" y="2" relative="1" as="geometry">
+            <mxPoint x="-23.99" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-48" value="" style="endArrow=classic;html=1;exitX=0.1;exitY=0.62;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="571" y="630" as="sourcePoint" />
+            <mxPoint x="170" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-49" value="再给你新的token&lt;br&gt;POST pdd.com/token?token=t456&amp;amp;refreshToken=rt456&amp;amp;expire=xxx" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-48">
+          <mxGeometry x="-0.1786" y="-1" relative="1" as="geometry">
+            <mxPoint x="-36" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-53" value="" style="endArrow=classic;html=1;exitX=0.1;exitY=0.024;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-2" target="aFgjdF3cAKlBIOMiIda9-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-140" y="240" as="sourcePoint" />
+            <mxPoint x="-90" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-54" value="302" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aFgjdF3cAKlBIOMiIda9-53">
+          <mxGeometry x="0.1765" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
