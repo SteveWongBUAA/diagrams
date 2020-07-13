@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-07-13T15:41:32.790Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="lWsa4wir4H6Yr_1zs68J" version="13.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-07-13T16:01:28.019Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36" etag="JymmYeEiafosDlCQWSDs" version="13.4.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="2067" dy="1154" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -39,7 +39,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-40" value="根据appid取出redirect_url&lt;br&gt;生成授权码code123。&lt;br&gt;根据appid+当前登录用户生成OPENID&lt;br&gt;redis保存：&lt;br&gt;key code:${appid}&lt;br&gt;value:code_123,OPENID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFgjdF3cAKlBIOMiIda9-39" vertex="1" connectable="0">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-40" value="根据appid取出redirect_url&lt;br&gt;生成授权码code123。&lt;br&gt;根据appid+当前登录用户生成OPENID&lt;br&gt;redis保存：&lt;br&gt;key： code:${code}&lt;br&gt;value：&amp;nbsp; $appid,OPENID,maybeScope" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFgjdF3cAKlBIOMiIda9-39" vertex="1" connectable="0">
           <mxGeometry x="-0.2863" y="2" relative="1" as="geometry">
             <mxPoint x="92.2" y="25.19" as="offset" />
           </mxGeometry>
@@ -96,7 +96,7 @@
             <mxPoint x="349.5" y="208.08000000000004" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-10" value="点击愿意: POST wechat.com/auth/ok?appid=pdd.com" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFgjdF3cAKlBIOMiIda9-9" vertex="1" connectable="0">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-10" value="点击愿意: POST wechat.com/auth/ok?appid=pdd" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFgjdF3cAKlBIOMiIda9-9" vertex="1" connectable="0">
           <mxGeometry x="0.2265" y="2" relative="1" as="geometry">
             <mxPoint x="-165" y="-6.08" as="offset" />
           </mxGeometry>
@@ -118,9 +118,9 @@
             <mxPoint x="510" y="230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aFgjdF3cAKlBIOMiIda9-14" value="校验code是否有效&lt;br&gt;生成token=t123，1分钟有效 &lt;br&gt;再给一个refreshToken=rt123用来刷新token&lt;br&gt;返回redis存的OPENID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFgjdF3cAKlBIOMiIda9-13" vertex="1" connectable="0">
+        <mxCell id="aFgjdF3cAKlBIOMiIda9-14" value="校验appid+secretKey是否有效&lt;br&gt;校验code是否有效（redis）&lt;br&gt;根据appid从redis取出code作对比，取出OPENID&lt;br&gt;生成token=t123，1分钟有效 &lt;br&gt;再给一个refreshToken=rt123用来刷新token&lt;br&gt;返回redis存的OPENID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="aFgjdF3cAKlBIOMiIda9-13" vertex="1" connectable="0">
           <mxGeometry x="-0.1366" y="-6" relative="1" as="geometry">
-            <mxPoint x="-9.5" y="4" as="offset" />
+            <mxPoint x="100.5" y="4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="aFgjdF3cAKlBIOMiIda9-15" value="带token请求电话号码 带OPENID&#xa;GET wehat.com/phone header:Authorization: Bearer t123" style="verticalAlign=bottom;endArrow=block;entryX=-0.3;entryY=0.555;shadow=0;strokeWidth=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.1;exitY=0.552;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="3nuBFxr9cyL0pnOWT2aG-6" edge="1" source="3nuBFxr9cyL0pnOWT2aG-2">
@@ -201,6 +201,9 @@
           <mxGeometry x="0.1765" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="PvjQXxwFKx9jqgqt8RyQ-1" value="授权码是跟appid+用户id绑定的" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="200" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
